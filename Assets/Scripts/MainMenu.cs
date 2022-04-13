@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject startButtonPanel;
     public GameObject menuPanel;
     public GameObject howToPlayPanel;
+    public GameObject shopPanel;
     public void StartButtonMainMenu()
     {
         startButtonPanel.SetActive(true);
@@ -22,7 +23,7 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(false);
         howToPlayPanel.SetActive(true);
     }
-    public void closeButtonHowToPlayMainMenu()
+    public void CloseOrBackButton()
     {
         titlePanel.SetActive(true);
         menuPanel.SetActive(true);
@@ -41,11 +42,35 @@ public class MainMenu : MonoBehaviour
     }
     public void ShopButton()
     {
-        SceneManager.LoadScene("ShopScene");
+        menuPanel.SetActive(false);
+        shopPanel.SetActive(true);
     }
     public void InventoryButton()
     {
 
     }
+
+    //---------------------SHOP---------------------//
+
+    public GameObject boosters;
+    public GameObject monsterCards;
+
+    public void openBoosters()
+    {
+        boosters.SetActive(true);
+        monsterCards.SetActive(false);
+    }
+    public void openMonsterCards()
+    {
+        boosters.SetActive(false);
+        monsterCards.SetActive(true);
+    }
+    public void CloseShopPanel()
+    {
+        startButtonPanel.SetActive(true);
+        shopPanel.SetActive(false);
+    }
+
+
 
 }
