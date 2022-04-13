@@ -9,9 +9,12 @@ EditorBuildSettings:
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes 1/Esma.unity
+    path: Assets/Scenes 1/MainMenuScene.unity
     guid: 2b6bf1fd32badd244b0e6ecc6c66921f
   - enabled: 1
     path: Assets/Scenes 1/MainScene.unity
     guid: d45c87c8015ab1a4e91b2e094bb4464d
+  - enabled: 1
+    path: Assets/Scenes 1/ShopScene.unity
+    guid: b8982ebebcdc19143ab8844b02514c91
   m_configObjects: {}

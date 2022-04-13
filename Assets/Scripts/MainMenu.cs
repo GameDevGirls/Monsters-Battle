@@ -6,11 +6,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     public GameObject titlePanel;
+    public GameObject startButtonPanel;
     public GameObject menuPanel;
     public GameObject howToPlayPanel;
     public void StartButtonMainMenu()
     {
-        SceneManager.LoadScene("MainScene");
+        startButtonPanel.SetActive(true);
+        titlePanel.SetActive(false);
+        menuPanel.SetActive(false);
     }
 
     public void HowToPlayButtonMainMenu()
@@ -24,9 +27,23 @@ public class MainMenu : MonoBehaviour
         titlePanel.SetActive(true);
         menuPanel.SetActive(true);
         howToPlayPanel.SetActive(false);
+        startButtonPanel.SetActive(false);
     }
 
     public void CreditsButtonMainMenu()
+    {
+
+    }
+
+    public void BattleButtonScene()
+    {
+        SceneManager.LoadScene("MainScene");
+    }
+    public void ShopButton()
+    {
+        SceneManager.LoadScene("ShopScene");
+    }
+    public void InventoryButton()
     {
 
     }

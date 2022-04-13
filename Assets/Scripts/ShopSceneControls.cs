@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEditor.UI;
+using UnityEngine.SceneManagement;
 
 public class ShopSceneControls : MonoBehaviour
 {
@@ -18,6 +18,10 @@ public class ShopSceneControls : MonoBehaviour
     {
         boosters.SetActive(false);
         monsterCards.SetActive(true);
+    }
+    public void CloseShopPanel()
+    {
+        SceneManager.LoadScene("MainMenuScene");
     }
 
 
