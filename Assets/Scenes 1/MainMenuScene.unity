@@ -157,8 +157,8 @@ MonoBehaviour:
   menuPanel: {fileID: 6903018730456912251}
   howToPlayPanel: {fileID: 8255075200225544405}
   shopPanel: {fileID: 1682581620}
-  boosters: {fileID: 2135280216380976772}
-  monsterCards: {fileID: 2135280215821010414}
+  boosters: {fileID: 655173186456808080}
+  monsterCards: {fileID: 2135280216181034869}
 --- !u!4 &67881295
 Transform:
   m_ObjectHideFlags: 0
@@ -4763,8 +4763,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopSceneControls, Assembly-CSharp
+      - m_Target: {fileID: 67881294}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: openMonsterCards
         m_Mode: 1
         m_Arguments:
@@ -6881,8 +6881,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: ShopSceneControls, Assembly-CSharp
+      - m_Target: {fileID: 67881294}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
         m_MethodName: openBoosters
         m_Mode: 1
         m_Arguments:
