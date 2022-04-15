@@ -11,6 +11,7 @@ public class MainMenu : MonoBehaviour
     public GameObject howToPlayPanel;
     public GameObject shopPanel;
     public GameObject inventoryPanel;
+    public GameObject equipPanel;
     public void StartButtonMainMenu()
     {
         startButtonPanel.SetActive(true);
@@ -37,7 +38,7 @@ public class MainMenu : MonoBehaviour
 
     }
 
-    public void BattleButtonScene()
+    public void OpenBattleScene()
     {
         SceneManager.LoadScene("MainScene");
     }
@@ -62,7 +63,16 @@ public class MainMenu : MonoBehaviour
         inventoryPanel.SetActive(false);
     }
 
+    public void CloseEquipPanel()
+    {
+        equipPanel.SetActive(false);
 
+    }
+
+    public void OpenEquipPanel()
+    {
+        equipPanel.SetActive(true);
+    }
 
 
 
