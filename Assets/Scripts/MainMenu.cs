@@ -9,6 +9,7 @@ public class MainMenu : MonoBehaviour
     public GameObject startButtonPanel;
     public GameObject menuPanel;
     public GameObject howToPlayPanel;
+    public GameObject credits;
     public GameObject shopPanel;
     public GameObject inventoryPanel;
     public GameObject equipPanel;
@@ -25,17 +26,19 @@ public class MainMenu : MonoBehaviour
         menuPanel.SetActive(false);
         howToPlayPanel.SetActive(true);
     }
+    public void CreditsButtonMainMenu()
+    {
+        titlePanel.SetActive(false);
+        menuPanel.SetActive(false);
+        credits.SetActive(true);
+    }
     public void CloseOrBackButton()
     {
         titlePanel.SetActive(true);
         menuPanel.SetActive(true);
         howToPlayPanel.SetActive(false);
         startButtonPanel.SetActive(false);
-    }
-
-    public void CreditsButtonMainMenu()
-    {
-
+        credits.SetActive(false);
     }
 
     public void OpenBattleScene()
