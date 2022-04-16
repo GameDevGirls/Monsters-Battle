@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1fde5ccb0738c9849bb4cfbd4dd47966, type: 3}
   m_Name: Salamander
   m_EditorClassIdentifier: 
-  monsterCardName: 
-  monsterCardDescription: 
+  monsterCardName: Salamander
+  monsterCardDescription: adda adsfsd
   monsterCardLV1Sprite: {fileID: 0}
   monsterCardLV2Sprite: {fileID: 0}
   monsterCardLV3Sprite: {fileID: 0}
