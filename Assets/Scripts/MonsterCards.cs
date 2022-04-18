@@ -12,11 +12,11 @@ public class MonsterCards : ScriptableObject
     public Sprite monsterCardLV2Sprite;
     public Sprite monsterCardLV3Sprite;
 
-    //public int monsterCoinCost;
-    //public int attack;
-    //public int health;
-    //public int defense;
-    //public Level monsterCardLevel;
+    public int price;
+    public int attack;
+    public int health;
+    public int defense;
+    public Level monsterCardLevel;
 
 
     public int boostedAttack;

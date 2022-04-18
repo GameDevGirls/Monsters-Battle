@@ -2,9 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using TMPro;
+using UnityEngine.UI;
 
 public class MainMenu : MonoBehaviour
 {
+    public static MainMenu Instance;
+
+
     public GameObject titlePanel;
     public GameObject startButtonPanel;
     public GameObject menuPanel;
@@ -27,6 +32,35 @@ public class MainMenu : MonoBehaviour
     public GameObject shell;
     public GameObject skeleton;
     public GameObject troll;
+
+
+
+    //TEST VARIABLES
+    public MonsterCardHolder monsterCardHolderx;
+    public GameObject monsterCardsDetailsShop;
+
+    //TEST VARIABLES SHOP DETAILS
+    public TMP_Text monsterCardName;
+    public Image monsterCardImage;
+    public TMP_Text monsterCardHealth;
+    public TMP_Text monsterCardAttack;
+    public TMP_Text monsterCardDefence;
+    public TMP_Text monsterCardDetails;
+    public TMP_Text monsterCardPrice;
+
+
+    private void Awake()
+    {
+        if (Instance != null && Instance != this)
+        {
+            Destroy(this);
+        }
+        else
+        {
+            Instance = this;
+        }
+    }
+
     public void StartButtonMainMenu()
     {
         startButtonPanel.SetActive(true);
@@ -91,6 +125,8 @@ public class MainMenu : MonoBehaviour
         equipPanel.SetActive(true);
     }
 
+    /*
+    #region ESMA
     //Salamander
     public void OpenSalamanderCardDetail()
     {
@@ -117,7 +153,7 @@ public class MainMenu : MonoBehaviour
 
 
     //Bat
-     public void OpenBatCardDetail()
+    public void OpenBatCardDetail()
     {
         monstersAndBooster.SetActive(false);
         bat.SetActive(true);
@@ -243,7 +279,48 @@ public class MainMenu : MonoBehaviour
         monstersAndBooster.SetActive(true);
         troll.SetActive(false);
     }
+    #endregion
+    */
 
 
+    //TEST
+    public void openMonsterCardDetailsShop()
+    {
+        monstersAndBooster.SetActive(false);
+        monsterCardsDetailsShop.SetActive(true);
+        displayMonsterCardDetailsShop();
+    }
+
+    public void displayMonsterCardDetailsShop()
+    {
+        MonsterCards monsterCards = monsterCardHolderx.monsterCard;
+        monsterCardName.text = monsterCards.monsterCardName;
+        //Checklvl
+        if(monsterCards.monsterCardLevel == MonsterCards.Level.firstLevel)
+        {
+            monsterCardImage.sprite = monsterCards.monsterCardLV1Sprite;
+
+        }else if(monsterCards.monsterCardLevel == MonsterCards.Level.secondLevel)
+        {
+            monsterCardImage.sprite = monsterCards.monsterCardLV2Sprite;
+
+        }
+        else
+        {
+            monsterCardImage.sprite = monsterCards.monsterCardLV3Sprite;
+
+        }
+        monsterCardHealth.text = monsterCards.health.ToString();
+        monsterCardAttack.text = monsterCards.attack.ToString();
+        monsterCardDefence.text = monsterCards.defense.ToString();
+        monsterCardDetails.text = monsterCards.monsterCardDescription;
+        monsterCardPrice.text = monsterCards.price.ToString();
+}
+
+    public void closeMonsterCardDetailsShop()
+    {
+        monstersAndBooster.SetActive(true);
+        monsterCardsDetailsShop.SetActive(false);
+    }
 
 }

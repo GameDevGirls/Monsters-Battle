@@ -551,6 +551,7 @@ GameObject:
   - component: {fileID: 3746370877994253037}
   - component: {fileID: 3746370877994253036}
   - component: {fileID: 8623340989131916794}
+  - component: {fileID: 4972584214105740076}
   m_Layer: 5
   m_Name: Item_MonsterCardsShop
   m_TagString: Untagged
@@ -632,6 +633,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   monsterCard: {fileID: 0}
+--- !u!114 &4972584214105740076
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3746370877994253026}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bba8de6489312b847ac138616597b11b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3746370878467411930
 GameObject:
   m_ObjectHideFlags: 0
@@ -830,4 +843,16 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 8996679960998137978}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 4972584214105740076}
+        m_TargetAssemblyTypeName: monsterCardHolderToController, Assembly-CSharp
+        m_MethodName: monsterCardToController
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
