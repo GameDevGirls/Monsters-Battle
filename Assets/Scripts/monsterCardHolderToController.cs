@@ -8,5 +8,7 @@ public class monsterCardHolderToController : MonoBehaviour
     {
         MainMenu.Instance.monsterCardHolderx = this.gameObject.transform.GetComponent<MonsterCardHolder>();
         MainMenu.Instance.openMonsterCardDetailsShop();
+
+        ItemInstantiateController.Instance.lastClickedMonsterCardShop = this.gameObject.transform.GetComponent<MonsterCardHolder>().monsterCard;
     }
 }

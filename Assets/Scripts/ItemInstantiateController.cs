@@ -6,11 +6,20 @@ using TMPro;
 
 public class ItemInstantiateController : MonoBehaviour
 {
+    [Header("Shop system")]
     public List<MonsterCards> monsterCardsShop = new List<MonsterCards>();
     public GameObject Item_monsterCardShop;
     public GameObject monsterCardShopItemHolder;
+    public MonsterCards lastClickedMonsterCardShop;
+
+    [Header("Inventory System")]
+    public List<MonsterCards> monsterCardsInventory = new List<MonsterCards>();
+    public GameObject monsterCardInventoryItemHolder;
+    public GameObject Item_monsterCardInventory;
+
 
     public static ItemInstantiateController Instance;
+
 
     private void Awake()
     {
@@ -24,7 +33,7 @@ public class ItemInstantiateController : MonoBehaviour
         }
     }
 
-
+    #region SHOP
     public void instantiateMonsterCardsShop()
     {
         ClearChildren(monsterCardShopItemHolder);
@@ -38,10 +47,26 @@ public class ItemInstantiateController : MonoBehaviour
         }
     }
 
-    public void removeFromMonsterCardsShop()
-    {
 
+    public void monsterCardDetailsShopBUYBUTTON()
+    {
+        foreach (MonsterCards card in monsterCardsShop)
+        {
+            if (card.monsterCardName == lastClickedMonsterCardShop.monsterCardName)
+            {
+                //CHECK IF THE COINS ARE ENOUGH
+                monsterCardsInventory.Add(card);
+                monsterCardsShop.Remove(card);
+                MainMenu.Instance.closeMonsterCardDetailsShop();
+                break;
+            }
+        }
     }
+
+    #endregion
+
+
+
 
     public void ClearChildren(GameObject toClear)
     {
@@ -65,4 +90,20 @@ public class ItemInstantiateController : MonoBehaviour
 
     }
 
+
+    #region INVENTORY
+    public void instantiateMonsterCardsInventory()
+    {
+        ClearChildren(monsterCardInventoryItemHolder);
+
+        foreach (MonsterCards monster in monsterCardsInventory)
+        {
+            GameObject x = Instantiate(Item_monsterCardInventory, monsterCardInventoryItemHolder.transform);
+            x.GetComponent<MonsterCardHolder>().monsterCard = monster;
+            //check for the level then set the sprite
+            x.transform.GetChild(0).gameObject.GetComponent<Image>().sprite = monster.monsterCardLV1Sprite;
+            x.transform.GetChild(1).GetChild(0).gameObject.GetComponent<TMP_Text>().text = monster.monsterCardLevel.ToString();
+        }
+    }
+    #endregion
 }

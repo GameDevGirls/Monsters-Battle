@@ -321,6 +321,7 @@ public class MainMenu : MonoBehaviour
     {
         monstersAndBooster.SetActive(true);
         monsterCardsDetailsShop.SetActive(false);
+        ItemInstantiateController.Instance.instantiateMonsterCardsShop();
     }
 
 }
