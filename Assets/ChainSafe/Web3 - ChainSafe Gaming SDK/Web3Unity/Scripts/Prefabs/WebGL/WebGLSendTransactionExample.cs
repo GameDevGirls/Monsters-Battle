@@ -33,7 +33,8 @@ public class WebGLSendTransactionExample : MonoBehaviour
     public void Update()
     {
         if (hash.text.Contains("0")){
-            SceneManager.LoadScene(2);
+            //SceneManager.LoadScene(2);
+            Debug.Log("Hash is " + hash);
         }
     }
 

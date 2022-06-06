@@ -5,6 +5,7 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "New Card", menuName = "Card")]
 public class MonsterCards : ScriptableObject
 {
+    public string tokenId;
     public string monsterCardName;
     public string monsterCardDescription;
 

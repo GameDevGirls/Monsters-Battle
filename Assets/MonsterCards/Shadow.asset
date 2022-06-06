@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1fde5ccb0738c9849bb4cfbd4dd47966, type: 3}
-  m_Name: Bat
+  m_Name: Shadow
   m_EditorClassIdentifier: 
-  tokenId: 2
-  monsterCardName: Bat
+  tokenId: 1
+  monsterCardName: Shadow
   monsterCardDescription: 'adda adsfsd abdhbfosudngrh '
-  monsterCardLV1Sprite: {fileID: 21300000, guid: 983cfc59d716caf4d89cad64588d06b8, type: 3}
-  monsterCardLV2Sprite: {fileID: 21300000, guid: ba6ba3c9aca467248a25e76475d0ac76, type: 3}
-  monsterCardLV3Sprite: {fileID: 21300000, guid: 528d4283240f19c49a7b73f2bc66f9dd, type: 3}
+  monsterCardLV1Sprite: {fileID: 21300000, guid: 9caafe34bc70bf341865dd7670065ea7, type: 3}
+  monsterCardLV2Sprite: {fileID: 21300000, guid: 7f7e398280164574d8fa1a8395b5140a, type: 3}
+  monsterCardLV3Sprite: {fileID: 21300000, guid: 9651b76959efe4c4588a7e5a2099520b, type: 3}
   price: 2323
   attack: 565
   health: 1212
