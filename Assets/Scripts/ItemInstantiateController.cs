@@ -47,7 +47,7 @@ public class ItemInstantiateController : MonoBehaviour
 
         string chain = "ethereum";
         string network = "rinkeby";
-        string contract = "0xD2D701351272fD3257236d59EC4F5cAC2AF71B61";
+        string contract = "0xc7a0016A793f4EcBfb7d82db22fc3448911b478F";
         string account = "0xfE8cb6256108a5ce16cEDCe0bD9B4dC3c7695Db6";
 
         foreach (MonsterCards monster in monsterCards)
@@ -159,7 +159,7 @@ public class ItemInstantiateController : MonoBehaviour
 
         string chain = "ethereum";
         string network = "rinkeby";
-        string contract = "0xD2D701351272fD3257236d59EC4F5cAC2AF71B61";
+        string contract = "0xc7a0016A793f4EcBfb7d82db22fc3448911b478F";
         string account = PlayerPrefs.GetString("Account");
 
         foreach (MonsterCards monster in monsterCards)
