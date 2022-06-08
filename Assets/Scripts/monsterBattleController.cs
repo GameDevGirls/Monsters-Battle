@@ -16,21 +16,24 @@ public class monsterBattleController : MonoBehaviour
     public Text healthTxt;
     public Text EnemyHealthTxt;
 
+    public GameObject winPanel;
+
     bool alreadyAttackedEnemy = false;
     void Start()
     {
+
         anim = GetComponent<SkeletonAnimation>();
 
-        if (!isEnemy)
-        {
-            card = GetComponent<MonsterCardHolder>().monsterCard;
-            health = card.health;
-        }
-        else
-        {
-            health = 500;
-        }
 
+        
+        card = GetComponent<MonsterCardHolder>().monsterCard;
+        health = card.health;
+
+        if (health > 0)
+        {
+            winPanel.SetActive(false);
+
+        }
     }
 
     void Update()
@@ -54,6 +57,9 @@ public class monsterBattleController : MonoBehaviour
             if (isEnemy)
             {
                 Debug.Log("You win");
+                win();
+                health = card.health;
+                enemy.GetComponent<monsterBattleController>().health = enemy.GetComponent<monsterBattleController>().card.health;
             }
             else
             {
@@ -118,6 +124,11 @@ public class monsterBattleController : MonoBehaviour
         yield return new WaitForSeconds(1.45f);
         Time.timeScale = 0;
 
+    }
+
+    void win()
+    {
+        winPanel.SetActive(true);
     }
 
 }

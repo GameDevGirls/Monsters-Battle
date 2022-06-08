@@ -20,7 +20,7 @@ MonoBehaviour:
   monsterCardLV3Sprite: {fileID: 21300000, guid: 528d4283240f19c49a7b73f2bc66f9dd, type: 3}
   price: 2323
   attack: 565
-  health: 1212
+  health: 400
   defense: 4352
   monsterCardLevel: 0
   boostedAttack: 0
