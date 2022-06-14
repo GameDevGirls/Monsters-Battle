@@ -45,6 +45,7 @@ public class WebGLTransfer20: MonoBehaviour
             Debug.LogException(e, this);
         }
     }
+    /*
     public void Update()
     {
         if (responseee.Contains("0"))
@@ -53,4 +54,5 @@ public class WebGLTransfer20: MonoBehaviour
             menuUI.SetActive(false);
         }
     }
+    */
 }
